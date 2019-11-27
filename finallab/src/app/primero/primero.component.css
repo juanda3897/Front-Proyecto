@@ -1,0 +1,54 @@
+.CampoFecha {
+    width: 32%;
+    padding-right: 2%; 
+}
+.CampoLab {
+    width: 32%;
+    padding-right: 2%; 
+}
+.CampoArea {
+    width: 32%;
+}
+.ContenedorPrimero {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%; 
+}
+.example-container {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.CampoDocente {
+    padding-right: 2%;
+    width: 32%;
+}
+.CampoPractica {
+    padding-right: 2%;
+    width: 32%;
+}
+.CampoFacultad {
+    width: 32%;
+}
+.ContenedorCheck {
+    padding-left: 15%;
+}
+.NuEstudiantes {
+    width: 100%;
+}
+.ContenedorEstudiantes {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.Contenedor {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.aux {
+    width: 100%;
+}
+.Observaciones {
+    width: 100%;
+}

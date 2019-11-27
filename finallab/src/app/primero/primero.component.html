@@ -1,0 +1,92 @@
+<div>
+<div [(ngModel)]="laboratorio.fecha"  name="fecha" class="ContenedorPrimero">
+    <mat-form-field class="CampoFecha">
+                <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter" placeholder="Qué día requiere el Laboratorio?" >
+                <mat-datepicker-toggle [for] = "myDatePicker" matSuffix> </mat-datepicker-toggle>
+                <mat-datepicker #myDatePicker  > </mat-datepicker>
+    </mat-form-field>
+        
+    <mat-form-field [(ngModel)]="laboratorio.lab"  name="lab" class="CampoLab">
+                <mat-select placeholder="Laboratorio">
+                    <mat-option value="option"> Software Libre</mat-option>
+                    <mat-option value="option"> Hardware y Redes</mat-option>
+                    <mat-option value="option"> Linux</mat-option>
+                </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field [(ngModel)]="laboratorio.asig"  name="asig" class="CampoArea">
+                    <mat-select placeholder="Asignatura">
+                             <mat-option value="option"> Redes</mat-option>
+                             <mat-option value="option"> Arquitectura</mat-option>
+                             <mat-option value="option"> Seguridad</mat-option>
+                    </mat-select>
+    </mat-form-field>  
+</div>
+
+
+<div   class= "example-container">
+
+<mat-form-field [(ngModel)]="laboratorio.doc"  name="doc" class="CampoDocente">
+            <input matInput placeholder="Docente" [formControl] ="Docente" required>
+            <mat-hint align="start"></mat-hint>
+</mat-form-field>
+           
+<mat-form-field [(ngModel)]="laboratorio.nom"  name="nom" class="CampoPractica">
+            <input matInput placeholder="Nombre de la Práctica" [formControl] ="" required>
+                 <mat-hint align="start"></mat-hint>
+</mat-form-field>
+
+<mat-form-field [(ngModel)]="laboratorio.fac"  name="fac" class="CampoFacultad">
+        <mat-select placeholder="Facultad">
+                 <mat-option value="option"> Ingeniería</mat-option>
+                 <mat-option value="option"> Administración</mat-option>
+                 <mat-option value="option"> Lenguas</mat-option>
+        </mat-select>
+</mat-form-field> 
+</div>
+   
+<br>
+<div [(ngModel)]="laboratorio.opc"  name="opc" class="ContenedorCheck">
+    <li>
+        <mat-checkbox color = "primary">La solicitud tiene Guía de Laboratorio</mat-checkbox>
+    </li>
+        
+    <li>
+        <mat-checkbox color = "primary"> Requiere el uso del Laboratorio</mat-checkbox>
+    </li>
+    <li> 
+        <mat-checkbox color = "primary"> Requiere Asistencia del Auxiliar de Laboratorio</mat-checkbox>
+    </li>
+     <li>
+        <mat-checkbox color = "primary">Utiliza máquinas, equipos y/o herammientas (Cantidad y Descripción)</mat-checkbox>
+    </li>
+    <li>
+        <mat-checkbox color = "primary">Utiliza material de consumo (Cantidad y Descripción)</mat-checkbox>
+    </li>
+</div>
+<br>
+<div [(ngModel)]="laboratorio.num"  name="num" class="ContenedorEstudiantes">
+    <mat-form-field class="NuEstudiantes">
+            <input matInput placeholder="Número de Estudiantes en la práctica" [formControl] ="" required>
+            <mat-hint align="start"></mat-hint>
+    </mat-form-field>
+</div>
+<div [(ngModel)]="laboratorio.aux"  name="aux" class="Contenedor">
+    <mat-form-field class="aux">
+            <input matInput placeholder="Auxiliar de Laboratorio" [formControl] ="" required>
+            <mat-hint align="start"></mat-hint>
+    </mat-form-field>
+    <br>
+
+    <br>
+    <mat-form-field [(ngModel)]="laboratorio.obv"  name="obv" class="Observaciones">
+        <input matInput placeholder="Observaciones" >
+        <mat-hint align="start"></mat-hint>
+    </mat-form-field>
+
+    
+    <br> 
+    
+</div>   
+<button (click)="Guardar()">Guardar Laboratorio</button>
+</div>
